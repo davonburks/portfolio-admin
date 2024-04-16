@@ -1,6 +1,4 @@
 import Link from "next/link";
-import { Button } from "../ui/button";
-import { SiGithub } from "react-icons/si";
 import LoginForm from "./loginForm";
 
 export default function Navbar() {

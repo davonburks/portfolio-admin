@@ -19,17 +19,17 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <main className="max-w-7xl mx-auto p-10 space-y-5">
-            <Navbar />
-            {children}
-          </main>
-        </ThemeProvider>
+      <ThemeProvider
+					attribute="class"
+					defaultTheme="dark"
+					enableSystem
+					disableTransitionOnChange
+				>
+					<main className="max-w-7xl mx-auto lg:py-10 space-y-10 p-5 lg:p-0">
+						<Navbar />
+						{children}
+					</main>
+				</ThemeProvider>
       </body>
     </html>
   );
