@@ -6,7 +6,7 @@ interface UserState {
   setUser: (user: User | undefined) => void
 }
 
-export const useBearStore = create<UserState>()((set) => ({
+export const useUser = create<UserState>()((set) => ({
   user: undefined,
   setUser: (user) => set(() => ({ user })),
 }))
