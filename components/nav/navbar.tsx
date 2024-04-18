@@ -9,7 +9,7 @@ export default function Navbar() {
   const user = useUser(state => state.user);  // Accessing user state correctly
 
   return (
-    <nav className="flex items-center justify-between">
+    <nav className="w-full justify-between items-center flex p-5 xl:p-0">
       <div className="group">
         <Link href="/">Davon Blog</Link>
         <div className="h-1 w-0 group-hover:w-full transition-width duration-300"></div>
