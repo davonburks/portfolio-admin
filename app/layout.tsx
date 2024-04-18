@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/themeprovider";
 import Navbar from "@/components/nav/navbar";
+import SessionProvider from "@/components/sessionprovider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,17 +20,18 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-      <ThemeProvider
-					attribute="class"
-					defaultTheme="dark"
-					enableSystem
-					disableTransitionOnChange
-				>
-					<main className="max-w-7xl mx-auto lg:py-10 space-y-10 p-5 lg:p-0">
-						<Navbar />
-						{children}
-					</main>
-				</ThemeProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <main className="max-w-7xl mx-auto lg:py-10 space-y-10 p-5 lg:p-0">
+            <Navbar />
+            {children}
+          </main>
+        </ThemeProvider>
+        <SessionProvider />
       </body>
     </html>
   );
